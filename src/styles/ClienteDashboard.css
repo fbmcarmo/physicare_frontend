@@ -1,0 +1,62 @@
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+  }
+  
+  /* Estilo para o header que cobre toda a largura da tela */
+  .dashboard-header {
+    width: 100%;
+    background-color: #007bff; /* Cor de fundo do header */
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    position: fixed; /* Fixa o header no topo */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  /* Espaço para compensar o header fixo */
+  .dashboard-content {
+    margin-top: 80px; /* Ajuste para evitar que o conteúdo fique atrás do header */
+    width: 100%;
+    max-width: 800px; /* Limite de largura para centralizar */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estilo para links de navegação no header */
+  .nav-link {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1rem;
+  }
+  
+  .nav-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Título de boas-vindas e informações do cliente */
+  .welcome-message {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .section-title {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 15px;
+  }

@@ -3,6 +3,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Portal from './pages/Portal/Portal';
 import ClienteLogin from './pages/Cliente/ClienteLogin';
 import ProfissionalLogin from './pages/Profissional/ProfissionalLogin';
+import ClienteDashboard from './pages/Cliente/ClienteDashboard';
+import MinhasFichas from './pages/Cliente/ClienteMinhasFichas';
+import ClienteMinhasSolicitacoes from './pages/Cliente/ClienteMinhasSolicitações';
 
 function App() {
   return (
@@ -16,6 +19,13 @@ function App() {
         
         {/* Rota de login para o profissional */}
         <Route path="/profissional/login" element={<ProfissionalLogin />} />
+
+        <Route path="/cliente/dashboard" element={<ClienteDashboard />} />
+
+        <Route path="/cliente/fichas" element={<MinhasFichas />} />
+
+        <Route path="/cliente/solicitacoes/" element={<ClienteMinhasSolicitacoes/>} />
+
       </Routes>
     </Router>
   );

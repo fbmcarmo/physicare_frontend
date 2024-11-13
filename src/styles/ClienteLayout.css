@@ -1,0 +1,31 @@
+.cliente-layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .dashboard-header {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .dashboard-header .nav-link {
+    margin: 0 15px;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .dashboard-header .nav-link:hover {
+    text-decoration: underline;
+  }
+  
+  .content-container {
+    flex: 1;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
