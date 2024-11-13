@@ -8,7 +8,7 @@ import "../../styles/ClienteLogin.css";
 const ClienteLogin = () => {
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
-  const [errorMessage, setErrorMessage] = useState('');
+
   const navigate = useNavigate();  // Hook de navegação
 
   const handleSubmit = async (e) => {
@@ -21,7 +21,7 @@ const ClienteLogin = () => {
       // Redirecionar o usuário após login bem-sucedido
       navigate('/cliente/dashboard');  // Altere para a rota que você deseja redirecionar
     } catch (error) {
-      setErrorMessage('Erro ao fazer login. Tente novamente!');
+      alert("Erro no login. Tente novamente")
       console.error("Erro no login:", error);
     }
   };
@@ -44,7 +44,6 @@ const ClienteLogin = () => {
           value={senha}
           onChange={(e) => setSenha(e.target.value)}
         />
-        {errorMessage && <p className="error-message">{errorMessage}</p>}
         <LoginButton type="submit">Entrar</LoginButton>
       </form>
       

@@ -1,0 +1,26 @@
+.minhas-solicitacoes-container {
+    padding: 20px;
+  }
+  
+  .solicitacoes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .solicitacao-card {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  .solicitacao-card h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  
+  .solicitacao-card p {
+    margin: 4px 0;
+  }

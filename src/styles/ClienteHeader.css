@@ -1,0 +1,44 @@
+.cliente-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem;
+  }
+  
+  .header-left h1 {
+    margin: 0;
+  }
+  
+  .cliente-info p {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+  
+  .header-nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .header-nav a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .header-nav a:hover {
+    text-decoration: underline;
+  }
+  
+  .logout-button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .logout-button:hover {
+    text-decoration: underline;
+  }
