@@ -3,10 +3,10 @@ import Cookies from 'js-cookie';
 import { jwtDecode } from 'jwt-decode'; // Usando a exportação nomeada
 
 // Função para realizar o login
-export const clienteLogin = async (email, password) => {
+export const login = async (email, password) => {
   try {
 
-    const response = await api.post('/clientes/login', 
+    const response = await api.post('/profissionais/login', 
       { email, senha: password },
       {
         headers: {
@@ -42,7 +42,7 @@ export const isAuthenticated = () => {
 };
 
 // Função para decodificar o token e obter os dados do cliente
-export const getClienteFromToken = () => {
+export const getUsuarioFromToken = () => {
   const token = Cookies.get('token');
   
   if (!token) {
@@ -77,7 +77,7 @@ export const getTokenFromCookie = () => {
 
 // Função para buscar os dados completos do cliente no backend
 export const fetchClienteData = async () => {
-  const decodedToken = getClienteFromToken();
+  const decodedToken = getUsuarioFromToken();
 
   if (!decodedToken || !decodedToken.id) {
     throw new Error('Token inválido ou cliente não encontrado');
@@ -85,6 +85,21 @@ export const fetchClienteData = async () => {
 
   try {
     const response = await api.get(`/clientes/${decodedToken.id}`); // Chama a API para obter dados do cliente
+    return response.data; // Retorna os dados do cliente
+  } catch (error) {
+    throw new Error('Erro ao buscar os dados do cliente');
+  }
+};
+
+export const fetchProfissionalData = async () => {
+  const decodedToken = getUsuarioFromToken();
+
+  if (!decodedToken || !decodedToken.id) {
+    throw new Error('Token inválido ou cliente não encontrado');
+  }
+
+  try {
+    const response = await api.get(`/profissionais/${decodedToken.id}`); // Chama a API para obter dados do profissional
     return response.data; // Retorna os dados do cliente
   } catch (error) {
     throw new Error('Erro ao buscar os dados do cliente');
